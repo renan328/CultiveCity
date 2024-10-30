@@ -1,0 +1,69 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/img/fundohome.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    color: #FFF;
+}
+
+nav{
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linkinterno{
+    list-style: none;
+}
+.linkinterno > li > a{
+    background-color: #FFF;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: #000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > img{
+    width: 100px;
+    height: 100px
+}
+
+#Cabecario > h1{
+    width: 800px;
+    font-size: 100px;
+}
+
+footer {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.integrantes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.integrante {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 200px;
+}
+
+.integrante img{
+    border-radius: 5px;
+}
