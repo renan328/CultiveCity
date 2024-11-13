@@ -125,7 +125,7 @@ nav {
 #Diferenciais>h2 {
     color: #000;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-    font-size: 3em;
+    font-size: 2.5em;
     font-style: normal;
     font-weight: 700;
     line-height: 117.623%;
@@ -140,6 +140,50 @@ nav {
     line-height: 117.623%;
     letter-spacing: 9px;
     text-transform: uppercase;
+}
+
+#Diferenciais>img {
+    width: 75%;
+    height: 550px;
+}
+
+#Produtos {
+    padding: 40px;
+}
+
+#ContainerProdutos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Produtos>h2 {
+    color: #215D06;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 117.623%;
+    letter-spacing: 27px;
+    text-transform: uppercase;
+}
+
+#Produtos>h2>g {
+    color: #000;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+#ProdutoTomate {
+    color: #FE161A;
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+#ProdutoCenoura {
+    color: #FF4E00;
+    font-size: 1.1em;
+    font-weight: 800;
 }
 
 footer {
