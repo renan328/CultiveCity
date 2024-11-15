@@ -4,7 +4,9 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/img/fundohome.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/fundohome.jpg");
+    background: filter blur(4px);
+    ;
     background-size: cover;
     background-repeat: no-repeat;
     height: 550px;
@@ -86,7 +88,7 @@ nav {
     flex-wrap: wrap;
 }
 
-#MaisVisitados>.topico {
+.topico {
     margin-top: 4em;
     display: flex;
     flex-direction: column;
@@ -186,28 +188,93 @@ nav {
     font-weight: 800;
 }
 
-footer {
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.integrantes {
+#SobreNos {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/fundoSobrenos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
     display: flex;
-    justify-content: space-between;
 }
 
-.integrante {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 15px;
-    width: 200px;
+#SobreNosTomate {
+    width: 481px;
+    height: 481px;
+    margin-top: 100px;
 }
 
-.integrante img {
-    border-radius: 5px;
+#SobreNosPimentao {
+    width: 365px;
+    height: 365px;
 }
+
+#footer {
+    background-color: rgba(68, 120, 45, 0.51);
+    padding: 30px;
+    color: #000;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.footer-section {
+    min-width: 150px;
+}
+
+.footer-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    color: #000;
+}
+
+.footer-icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.footer-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-icons a img:hover {
+    opacity: 0.8;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-copyright p {
+    font-size: 1em;
+    color: #000;
+    font-weight: 400;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -248,7 +315,6 @@ footer {
 
     .logo>img {
         width: 3.125em;
-        /* equivalente a 50px */
         height: 3.125em;
     }
 
