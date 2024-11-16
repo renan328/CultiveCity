@@ -4,18 +4,13 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/fundohome.jpg");
-    background: filter blur(4px);
-    ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 550px;
-    color: #FFF;
     display: flex;
     flex-direction: column;
 }
 
 nav {
+    background: rgba(0, 0, 0, 0.20);
+    color: #353942;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,19 +21,27 @@ nav {
     display: flex;
 }
 
+.linkinterno li.active {
+    font-weight: 700;
+}
+
 .linkinterno>li>a {
     padding: 0.5em 1.1em;
     border-radius: 0.3em;
     text-decoration: none;
-    color: #FFF;
+    color: #000;
     font-size: 1em;
-    margin-right: 2em;
     transition: 400ms;
 }
 
+.linkinterno li {
+    text-transform: uppercase;
+    margin-right: 1.5em;
+}
+
 .linkinterno>li>a:hover {
-    background-color: #ffffffea;
-    color: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
 }
 
 .logo {
@@ -207,11 +210,85 @@ nav {
     height: 365px;
 }
 
+#AreaProdutos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.Produto img {
+    width: 250px;
+    height: 250px;
+}
+
+#batatadoce{
+    width: 250px;
+    height: 137px;
+
+}
+
+.FundoProduto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 288px;
+    border-radius: 60px;
+    background: #EBEAEA;
+    margin-bottom: 10px;
+}
+
+.DetalhesProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.ButtonProduto {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px; 
+    border-radius: 30px;
+    background: rgb(255, 147, 58);
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.ButtonProduto:hover {
+    background: rgb(255, 123, 26); 
+}
+
+.ButtonProduto img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
 #footer {
     background-color: rgba(68, 120, 45, 0.51);
     padding: 30px;
     color: #000;
-
+    margin: 0;
 }
 
 .footer-container {
