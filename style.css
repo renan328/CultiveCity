@@ -225,6 +225,7 @@ nav {
     align-items: center;
     margin: 20px;
     text-align: center;
+    text-decoration: none;
 }
 
 .Produto img {
@@ -232,10 +233,9 @@ nav {
     height: 250px;
 }
 
-#batatadoce{
+#batatadoce {
     width: 250px;
     height: 137px;
-
 }
 
 .FundoProduto {
@@ -258,30 +258,77 @@ nav {
     padding: 10px;
     font-size: 1.2em;
     color: #000;
+    margin-bottom: 10px;
 }
 
 .ButtonProduto {
     display: flex;
     align-items: center;
-    padding: 15px 20px; 
+    padding: 15px 20px;
     border-radius: 30px;
     background: rgb(255, 147, 58);
     color: #FFF;
     font-size: 1em;
     font-weight: 400;
     cursor: pointer;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     transition: background 0.3s;
 }
 
 .ButtonProduto:hover {
-    background: rgb(255, 123, 26); 
+    background: rgb(255, 123, 26);
 }
 
 .ButtonProduto img {
     width: 25px;
     height: 25px;
     margin-right: 5px;
+}
+
+#ProdutoEspecifico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AreaFoto img {
+    width: 500px;
+    height: 500px;
+}
+
+#BatataDoceDetalhes{
+    width: 470px;
+    height: 287px;
+    padding: 110px;
+}
+
+.DadosProdutos {
+    margin: 40px;
+    width: 500px;
+}
+
+.DadosProdutos h2 {
+    color: #000;
+    font-size: 2.6em;
+    font-weight: 600;
+}
+
+.DadosProdutos p {
+    text-align: justify;
+    font-weight: 400;
+}
+
+.AreaCompra {
+    display: flex;
+    align-items: center;
+}
+
+.AreaCompra h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+    line-height: 115%;
+    letter-spacing: 1.2px;
+    margin-right: 30px;
 }
 
 #footer {
