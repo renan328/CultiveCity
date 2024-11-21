@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/logofundobranco.jpeg">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logofundobranco.svg" type="image/x-icon">
     <title>Cultive City</title>
 
     <style>
@@ -124,7 +124,47 @@
         <section id="Diferenciais">
             <h2>Nossos <g>incríveis</g> diferenciais</h2>
 
-            <img src="img/slide2.png" alt="slide2">
+            <div class="slider">
+                <div class="slides">
+
+                    <!-- Radio Buttons -->
+                    <input type="radio" name="radio-btn" id="radio1" checked />
+                    <input type="radio" name="radio-btn" id="radio2" />
+                    <input type="radio" name="radio-btn" id="radio3" />
+                    <input type="radio" name="radio-btn" id="radio4" />
+
+                    <!-- Slide images -->
+                    <div class="slide first">
+                        <img src="img/slide1.png" alt="Imagem 1" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide2.png" alt="Imagem 2" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide3.png" alt="Imagem 3" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide4.png" alt="Imagem 4" />
+                    </div>
+                    
+                    <!-- Auto Navigation -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+
+                <!-- Manual Navigation -->
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+            <script src="script.js"></script>
         </section>
 
         <section id="Produtos">
@@ -134,31 +174,31 @@
 
             <div id="ContainerProdutos">
 
-                <div class="topico">
+                <a href="produtos.html" class="topico">
                     <img src="img/alfaceProdutos.png" alt="Alface">
                     <p>
                         <g>Alface</g>, nosso produto mais vendido
                     </p>
-                </div>
+                </a>
 
-                <div class="topico">
-                    <img src="img/cenouraProdutos.png" alt="Cenoura">
+                <a href="produtos.html" class="topico">
+                    <img src="img/pimentao.png" alt="Pimentão">
                     <p>
-                        <span id="ProdutoCenoura">Cenoura</span>, a raiz mais utilizada
+                        <span id="ProdutoPimentao">Pimentão</span>, o sabor que faz a diferença
                     </p>
-                </div>
+                </a>
 
-                <div class="topico">
+                <a href="produtos.html" class="topico">
                     <img src="img/tomateProdutos.png" alt="Tomate">
                     <p>
                         <span id="ProdutoTomate">Tomate</span>, o mais querido de todos
                     </p>
-                </div>
+                </a>
             </div>
         </section>
 
         <section id="SobreNos">
-            <img id="imgQuemSomos" src="img/quemSomos.png" alt="Quem Somos" width="350px" height="370px">
+            <img id="imgQuemSomos" src="img/quemSomos.png" alt="Quem Somos" width="450px" height="480px">
 
             <img id="SobreNosTomate" src="img/tomateSobreNos.png" alt="Quem Somos">
 
@@ -207,7 +247,6 @@
             <p>Copyright &copy; Cultive City 2024</p>
         </div>
     </footer>
-
 </body>
 
 </html>

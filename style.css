@@ -97,6 +97,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .topico>img {
@@ -147,9 +148,105 @@ nav {
     text-transform: uppercase;
 }
 
-#Diferenciais>img {
-    width: 75%;
-    height: 550px;
+.slider {
+    margin: 0 auto;
+    width: 1000px;
+    height: 650px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 1s;
+}
+
+.slide img {
+    width: 1000px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 1000px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border:  2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 1000px;
+    margin-top: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #FFF;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #FFF;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #FFF;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #FFF;
 }
 
 #Produtos {
@@ -165,7 +262,7 @@ nav {
 
 #Produtos>h2 {
     color: #215D06;
-    font-size: 50px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 900;
     line-height: 117.623%;
@@ -185,8 +282,8 @@ nav {
     font-weight: 800;
 }
 
-#ProdutoCenoura {
-    color: #FF4E00;
+#ProdutoPimentao {
+    color: #e58d22;
     font-size: 1.1em;
     font-weight: 800;
 }
@@ -296,7 +393,7 @@ nav {
     height: 500px;
 }
 
-#BatataDoceDetalhes{
+#BatataDoceDetalhes {
     width: 470px;
     height: 287px;
     padding: 110px;
@@ -332,19 +429,19 @@ nav {
 }
 
 /* CSS Págna de Cadastro */
-#Planos img{
+#Planos img {
     width: 100%;
     height: auto;
 }
 
-#Formulario{
+#Formulario {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#Formulario h2{
+#Formulario h2 {
     font-size: 1.2em;
     font-weight: 600;
 }

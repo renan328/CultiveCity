@@ -1,0 +1,125 @@
+setTimeout(() => {
+	const autoplayElement = document.querySelector(".has--autoplay");
+	const modalVideoElements = document.querySelectorAll(".has--video:not(.three__highlights__titles--main)");
+
+	modalVideoElements.forEach(function (element) {
+		element.addEventListener('click', function (e) {
+			e.preventDefault();
+			const elementLocalVideo = element.dataset.localVideoUrl
+
+			if (elementLocalVideo && elementLocalVideo.length > 0) {
+				playLocalVideo(element)
+				return;
+			}
+
+			const videoDetails = YoutubeIma.getVideoDetails(element, true)
+			playYouTubeVideo(videoDetails)
+		})
+	})
+
+	if (autoplayElement) {
+		const videoDetailsElement = autoplayElement.querySelector(".video-player-wrapper");
+		const videoComponentElement = autoplayElement.querySelector(".cnn.component-video");
+
+		if (!videoDetailsElement) {
+			console.error("Elemento .video-player-wrapper do vídeo não foi encontrado");
+			return;
+		}
+
+		const {videoWrapper, videoId, videoUi, width, height, autoplay, mute, vpmute, plcmt, hl, vpa, position} = YoutubeIma.getVideoDetails(videoDetailsElement);
+		videoComponentElement.click();
+		YoutubeIma.startVideoPlayer(videoWrapper, videoId, videoUi, width, height, autoplay, mute, vpmute, plcmt, hl, vpa, position);
+
+		// Teste: tentar dar play no vídeo depois de um tempo e forçando clique
+		setTimeout(() => {
+			forceVideoAutoplay(videoComponentElement);
+		}, 500);
+	}
+}, 0);
+
+
+// Função de teste para forçar autoplay do vídeo
+function forceVideoAutoplay(autoplayElement) {
+    setTimeout(() => {
+        const videoPlayerId = autoplayElement.querySelector(".video-wrapper")?.id;
+
+        player[videoPlayerId].mute();
+        player[videoPlayerId].playVideo();
+    }, 2000);
+}
+
+function playYouTubeVideo(videoDetails) {
+    const {title, videoWrapper, videoId, videoUi, width, height, autoplay, mute, vpmute, plcmt, hl, vpa, position} = videoDetails;
+
+    generateVideoModal(videoId, title, videoUi);
+
+    YoutubeIma.startVideoPlayer(videoWrapper, videoId, videoUi, width, height, autoplay, mute, vpmute, plcmt, hl, vpa, position);
+}
+
+function playLocalVideo(videoElement) {
+    const videoUrl = videoElement.dataset.localVideoUrl
+    const videoTitle = videoElement.dataset.videoTitle
+
+    generateVideoModal("local_video", videoTitle);
+
+    const videoModalElement = document.querySelector('.modal__video');
+    const videoTag = document.createElement('video');
+    const videoSrcTag = document.createElement('source');
+    videoTag.setAttribute('autoplay', 'true')
+    videoTag.setAttribute('controls', 'true')
+    videoSrcTag.setAttribute('src', videoUrl)
+    videoSrcTag.setAttribute('type', 'video/mp4')
+
+    videoTag.appendChild(videoSrcTag);
+    videoModalElement.appendChild(videoTag);
+}
+
+function generateVideoModal(videoId, title, videoUi = "") {
+    const body = document.querySelector('body');
+
+    const videoModalContent = `
+            <div class="modal__bg"></div>
+            <div class="modal__content">
+                <div
+                	id="modal__title_${videoId}"
+                	class="modal__title"
+				>
+					${title}
+				</div>
+                <div
+					hl="pt"
+					plcmt="2"
+					vpmute="0"
+					vpa="click"
+					class="modal__video"
+					id="player_${videoUi}_${videoId}"
+                >
+                	<!-- Vídeo será exibido aqui -->
+                </div>
+                <button class="modal__close">Fechar</button>
+            </div>
+        `;
+
+    // Cria um elemento HTML para o modal
+    const videoModal = document.createElement('div');
+    videoModal.classList.add('video__modal');
+
+    // Precisamos que o modal tenha um InnerHTML
+    // @codingStandardsIgnoreLine
+    videoModal.innerHTML = videoModalContent;
+
+    body.appendChild(videoModal);
+
+    handleCloseVideoModal();
+}
+
+function handleCloseVideoModal() {
+    const closeElements = document.querySelectorAll('.modal__close, .modal__bg');
+    const videoModalElement = document.querySelector('.video__modal');
+
+    closeElements.forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            videoModalElement.remove();
+        })
+    })
+}
