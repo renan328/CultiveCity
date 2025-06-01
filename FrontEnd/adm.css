@@ -1,4 +1,4 @@
-    /* css pagina adm */
+    css pagina adm
     html,
     body {
         background-image: url('img/fundotudojunto.png');
@@ -20,7 +20,7 @@
 
     .container-botoes button {
         padding: 10px 20px;
-        background-color: #ffffff;
+        background-color: #D6F7C7;
         color: rgb(0, 0, 0);
         border: none;
         border-radius: 8px;
