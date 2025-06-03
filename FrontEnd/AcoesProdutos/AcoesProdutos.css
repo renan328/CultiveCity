@@ -1,0 +1,31 @@
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px
+}
+
+.acoes button {
+  height: 55px;
+  width: 80%;
+  font-size: 1em;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+}
+
+.acoes a {
+  text-decoration: none;
+  color: white;
+}
+
+.editar {
+  background-color: #80c7b9;
+}
+
+.excluir {
+  background-color: #f37c5b;
+}
