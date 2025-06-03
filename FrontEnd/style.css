@@ -322,7 +322,6 @@ nav {
 .Produto {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 20px;
     text-align: center;
     text-decoration: none;
@@ -331,11 +330,6 @@ nav {
 .Produto img {
     width: 250px;
     height: 250px;
-}
-
-#batatadoce {
-    width: 250px;
-    height: 137px;
 }
 
 .FundoProduto {
@@ -362,8 +356,10 @@ nav {
 }
 
 .ButtonProduto {
+    width: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 15px 20px;
     border-radius: 30px;
     background: rgb(255, 147, 58);
@@ -371,7 +367,7 @@ nav {
     font-size: 1em;
     font-weight: 400;
     cursor: pointer;
-    /* margin-top: 10px; */
+    margin-top: 10px;
     transition: background 0.3s;
 }
 
@@ -490,6 +486,27 @@ form {
 
 button:hover {
     background-color: #218838;
+}
+
+.labelSelect{
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+select {
+    color: #555;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #FBFBFB;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+}
+
+select option{
+    color: #656565;
 }
 
 #footer {

@@ -1,0 +1,116 @@
+section {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+form {
+  background: white;
+  padding: 30px;
+}
+
+.dadosArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 265px;
+}
+
+.titulo-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.titulo-produto h1 {
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  color: #000;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.titulo-produto span {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.linha {
+  margin-bottom: 20px;
+  width: 100%;
+  margin-right: 60px;
+}
+
+.linhaSuper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.campo input,
+.campo textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.campo textarea {
+  resize: none;
+  height: 100px;
+}
+
+.campo-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-box {
+  border: 2px dashed green;
+  border-radius: 10px;
+  width: 360px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-label img {
+  width: 60px;
+  height: 60px;
+}
+
+.botao-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.botao-cadastrar {
+  background-color: #a3d18d;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+  background-color: #8fc472;
+}

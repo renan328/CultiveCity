@@ -1,0 +1,146 @@
+body {
+    background-image: url('../img/fundotudojunto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    height: 80%;
+    width: 70%;
+    padding: 35px;
+    background: #ffffff;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 64px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ContainerDados {
+    display: flex;
+    justify-content: space-between;
+}
+
+#userPlan {
+    text-transform: uppercase;
+}
+
+.dadosUsuario {
+    display: flex;
+    align-items: center;
+}
+
+.dadosEspecificos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    background-color: #c0c0c0;
+    clip-path: circle(50% at center);
+}
+
+.container-square {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px;
+    gap: 20px;
+}
+
+.compras {
+    margin-top: 80px;
+    font-size: 18px;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: #dbdbdb;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.square img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.endereco {
+    /* max-width: 700px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.form-container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.settings {
+    position: relative;
+    display: inline-block;
+}
+
+#menuOpcoes {
+    padding: 20px;
+    width: 250px;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 12px;
+    top: 40px;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#menuOpcoes.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#menuOpcoes button {
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    transition: 0.1s;
+    border-radius: 5px;
+}
+
+#menuOpcoes button:hover {
+    background: #f0f0f0;
+}
+
+#excluirConta{
+    color: #E24F42;
+}

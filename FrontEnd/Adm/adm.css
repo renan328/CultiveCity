@@ -1,0 +1,59 @@
+body {
+    background-image: url('../img/fundotudojunto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#AdmArea {
+    background-color: #FFF;
+    height: 70vh;
+    width: 80%;
+    border-radius: 60px;
+    padding: 55px;
+    padding-top: 10px;
+    margin: 50px;
+}
+
+.titulo h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.opcoesProduto {
+    margin-top: 20px;
+}
+
+.opcoesProduto a{
+    text-decoration: none;
+    color: #000;
+}
+
+.opcoesProduto h3{
+    font-size: 35px;
+}
+
+.opcoesProduto button {
+    padding: 15px 25px;
+    background-color: #D6F7C7;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    margin-right: 25px;
+}
+
+.opcoesProduto button:hover {
+    background-color: #ff8f2c;
+}

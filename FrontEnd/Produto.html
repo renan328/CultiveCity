@@ -4,64 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logofundobranco.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Produtos</title>
-
-    <style>
-        #CabecarioProdutos {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 60px 0px 60px 50px;
-        }
-
-        #CabecarioProdutos h1 {
-            font-size: 75px;
-            font-style: normal;
-            font-weight: 700;
-            color: #000;
-            line-height: normal;
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        #CabecarioProdutos h3 {
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            margin: 0;
-        }
-    </style>
+    <link rel="shortcut icon" href="../img/logofundobranco.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>Alface</title>
 </head>
 
 <body>
     <header id="HeaderCad">
         <nav>
             <div class="logo">
-                <img src="img/logoBlack.png" alt="Logo">
+                <img src="./img/logoBlack.png" alt="Logo" width="150px" height="150px">
             </div>
 
             <ul class="linkinterno">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a>Produtos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li class="active"><a href="./produtos.html">Produtos</a></li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
-                        <path d="M5.0625 9.70312L10.125 3.79688" stroke="black" stroke-width="1" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M21.9375 9.70312L16.875 3.79688" stroke="black" stroke-width="1" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                        <path d="M5.0625 9.70312L10.125 3.79688" stroke="black" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.9375 9.70312L16.875 3.79688" stroke="black" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" />
                         <path
                             d="M21.3032 23.2031H5.69723C5.33185 23.1965 4.97941 23.0667 4.69702 22.8347C4.41464 22.6027 4.21884 22.2822 4.14135 21.9251L1.7361 11.8001C1.67171 11.5577 1.6628 11.3038 1.71002 11.0573C1.75725 10.8109 1.85941 10.5783 2.00891 10.3768C2.1584 10.1754 2.3514 10.0101 2.57353 9.89351C2.79566 9.77687 3.04122 9.7118 3.29198 9.70312H23.7085C23.9592 9.7118 24.2048 9.77687 24.4269 9.89351C24.6491 10.0101 24.842 10.1754 24.9915 10.3768C25.1411 10.5783 25.2432 10.8109 25.2905 11.0573C25.3377 11.3038 25.3287 11.5577 25.2644 11.8001L22.8591 21.9251C22.7816 22.2822 22.5858 22.6027 22.3035 22.8347C22.0211 23.0667 21.6686 23.1965 21.3032 23.2031Z"
-                            stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M8.4375 13.0781V19.8281" stroke="black" stroke-width="1" stroke-linecap="round"
+                            stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.4375 13.0781V19.8281" stroke="black" stroke-width="2.2" stroke-linecap="round"
                             stroke-linejoin="round" />
-                        <path d="M13.5 13.0781V19.8281" stroke="black" stroke-width="1" stroke-linecap="round"
+                        <path d="M13.5 13.0781V19.8281" stroke="black" stroke-width="2.2" stroke-linecap="round"
                             stroke-linejoin="round" />
-                        <path d="M18.5625 13.0781V19.8281" stroke="black" stroke-width="1" stroke-linecap="round"
+                        <path d="M18.5625 13.0781V19.8281" stroke="black" stroke-width="2.2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </li>
@@ -81,14 +53,26 @@
     </header>
 
     <main>
-        <section id="CabecarioProdutos">
-            <h1>Produtos</h1>
-            <h3>SUA FEIRA ONLINE</h3>
+        <section id="ProdutoEspecifico">
+            <div class="AreaFoto">
+                <img id="produto-imagem" src="" alt="Imagem do produto">
+            </div>
+
+            <div class="DadosProdutos">
+                <h2 id="produto-nome">Carregando...</h2>
+
+                <p id="produto-descricao">Aguarde, buscando detalhes...</p>
+
+                <div class="AreaCompra">
+                    <h3 id="produto-preco">R$ --</h3>
+                    <div class="ButtonProduto">
+                        <img src="./img/cesta.svg" alt="Cesta de compras">
+                        <span>Comprar</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="AreaProdutos">
-            
-        </section>
     </main>
 
     <footer id="footer">
@@ -104,9 +88,9 @@
                 </ul>
 
                 <div class="footer-icons">
-                    <a href="#"><img src="img/Instagram.svg" alt="Instagram"></a>
-                    <a href="#"><img src="img/Whatsapp.svg" alt="WhatsApp"></a>
-                    <a href="#"><img src="img/Facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./img/Instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="./img/Whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#"><img src="./img/Facebook.svg" alt="Facebook"></a>
                 </div>
 
             </div>
@@ -132,8 +116,7 @@
             <p>Copyright &copy; Cultive City 2024</p>
         </div>
     </footer>
-
-    <script src="scripts/listaProdutos.js"></script>
+    <script src="./scripts/detalhesProduto.js"></script>
 </body>
 
 </html>

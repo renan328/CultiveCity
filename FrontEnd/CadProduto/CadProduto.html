@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/logofundobranco.svg" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="./editar.css">
-    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="CadProduto.css">
+    <title>Cadastrar Produto</title>
     <style>
         #CabecarioCad {
             display: flex;
@@ -46,6 +46,7 @@
             <li><a href="../produtos.html">Produtos</a></li>
             <li><a href="../cadastro.html">Cadastro</a></li>
 
+
             <li>
                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
                     <path d="M5.0625 9.70312L10.125 3.79688" stroke="black" stroke-width="1" stroke-linecap="round"
@@ -75,68 +76,55 @@
             </li>
         </ul>
     </nav>
-
 </header>
 
 <body>
     <main>
         <section>
-            <div class="titulo-perfil">
-                <h1>PERFIL</h1>
-                <span>EDIÇÃO</span>
+            <div class="titulo-produto">
+                <h1>CADASTRO</h1>
+                <span>DE PRODUTOS</span>
             </div>
-            <div class="form-container">
-                <form>
-                    <div class="input-group">
-                        <input type="text" name="nome" placeholder="Nome" required>
-                        <input type="text" name="sobrenome" placeholder="Sobrenome" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="E-mail" required>
+            <div class="form-produto">
+
+                <form id="form-produto">
+                    <div class="dadosArea">
+
+                        <div class="linha">
+                            <div class="linhaSuper">
+
+                            </div>
+                            <div class="campo">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome">
+                            </div>
+                            <div class="campo">
+                                <label for="preco">Preço</label>
+                                <input type="number" id="preco" name="preco">
+                            </div>
+
+                            <div class="campo">
+                                <label for="descricao">Descrição</label>
+                                <textarea id="descricao" name="descricao"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="imagemUrl">Link da imagem</label>
+                            <input type="text" id="imagemUrl" name="imagemUrl" placeholder="https://..." required>
+                        </div>
                     </div>
 
-                    <div class="input-group">
-                        <button type="button" id="mostrarSenha">Deseja alterar a senha?</button>
-                    </div>
-
-                    <div id="campoSenha" style="display: none;">
-                        <input type="password" name="senha_atual" placeholder="Senha atual">
-                        <input type="password" name="nova_senha" placeholder="Nova senha">
-                        <input type="password" name="confirmar_senha" placeholder="Confirmar nova senha">
-                    </div>
-
-                    <div class="selectPlano">
-                        <label class="labelSelect" for="plano">Escolha um plano:</label>
-                        <select name="plano" id="plano" required>
-                            <option value="">Selecione um plano</option>
-                            <option value="starter">Starter</option>
-                            <option value="team">Team</option>
-                            <option value="premium">Premium</option>
-                        </select>
-                    </div>
-
-                    <span>Endereço</span>
-                    <div class="input-group">
-                        <input type="text" id="cep" name="cep" placeholder="CEP" required>
-                        <input type="text" id="estado" name="estado" placeholder="Estado" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="rua" name="rua" placeholder="Rua" required>
-                        <input type="text" id="numero" name="numero" placeholder="Número" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
-                        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
-                    </div>
                     <div class="botao-container">
-                        <button type="submit" class="botao-editar">EDITAR</button>
+                        <button type="submit" class="botao-cadastrar">CADASTRAR</button>
                     </div>
                 </form>
             </div>
+
         </section>
     </main>
 
-    <script src="../scripts/editarUsuario.js"></script>
+    <script src="../scripts/cadastroProduto.js"></script>
 </body>
 
 </html>

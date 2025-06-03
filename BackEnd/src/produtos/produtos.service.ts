@@ -32,7 +32,7 @@ export class ProdutosService {
         const produtoAtualizado = await this.produtoModel.findByIdAndUpdate(
             id,
             updateProdutoDto,
-            { new: true }, // retorna o objeto já atualizado
+            { new: true },
         );
         if (!produtoAtualizado) {
             throw new NotFoundException('Produto não encontrado');
